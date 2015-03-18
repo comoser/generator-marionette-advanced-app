@@ -41,7 +41,7 @@ If you'd like to get to know Yeoman better and meet some of his friends, [Grunt]
 
 ## Introduction
 
-This generator follows an app and action based approach, with the objective of creating separate modules inside a bigger app. This proves to be useful in maintaining it and in order to better scale the app.
+This generator follows an app and action based approach, with the objective of creating separate modules inside a bigger app. *This proves to be useful in maintaining it and in order to better scale the app.*
 There are a lot of third party plugins and dependencies required for this to work properly:
 > [Backbone] (http://backbonejs.org/)
 
@@ -57,37 +57,39 @@ There are a lot of third party plugins and dependencies required for this to wor
 
 > [Tpl] (https://github.com/jfparadis/requirejs-tpl)
 
-This generator only creates and will ever only create the structure of the app. It will NOT include the dependencies you need in the vendor folder, leaving that task to you.
+This generator only creates and will ever only create the structure of the app. 
+It will NOT include the dependencies you need in the vendor folder, leaving that task to you.
+Refer to the Usage chapter in order to use this app structure properly.
 
 ## App Structure
 ```bash
 yourAppName
-|---index.html
+|---index.html                                // holds the base html of your app (keep it as simple as possible)
 |---assets
-|	|---css
-|	|---img
-|	|---js
-|	|	|---app.js
-|	|	|---main.js
-|	|	|---apps
-|	|	|	|---module1
-|	|	|	|	|---module1_app.js
-|	|	|	|	|---list
-|	|	|	|	|	|---list_controller.js
-|	|	|	|	|	|---list_view.js
-|	|	|	|	|	|---templates
+|	|---css                                     // all of the css's you need
+|	|---img                                     // all of the images you need
+|	|---js                                      // your main app folder, per say
+|	|	|---app.js                                // your main app (the entry point for your Marionette app)
+|	|	|---main.js                               // dependencies for require.js module (Marionette app starts here)
+|	|	|---apps                                  // where your modules or sub-apps reside
+|	|	|	|---module1                             // module or sub-app named "module1"
+|	|	|	|	|---module1_app.js                    // this specific module main app (the gluer of the sub-app)
+|	|	|	|	|---list                              // the action of listing something in this sub-app
+|	|	|	|	|	|---list_controller.js              // the controller of this action only
+|	|	|	|	|	|---list_view.js                    // the marionette views for the controller to use
+|	|	|	|	|	|---templates                       // templates for the listing action only
 |	|	|	|	|	|	|---module1_list_template.tpl
 |	|	|	|	|	|	|---etc
-|	|	|	|	|---new
-|	|	|	|	|	|---new_controller.js
-|	|	|	|	|	|---new_view.js
-|	|	|	|	|	|---templates
+|	|	|	|	|---new                               // the action of creating something new in this sub-app
+|	|	|	|	|	|---new_controller.js               // the controller of this action only
+|	|	|	|	|	|---new_view.js                     // the marionette views for the controller to use
+|	|	|	|	|	|---templates                       // templates for the new action only
 |	|	|	|	|	|	|---module1_new_template.tpl
 |	|	|	|	|	|	|---etc
-|	|	|	|	|---show
-|	|	|	|	|	|---show_controller.js
-|	|	|	|	|	|---show_view.js
-|	|	|	|	|	|---templates
+|	|	|	|	|---show                              // the action of showing something in this sub-app
+|	|	|	|	|	|---show_controller.js              // the controller of this action only
+|	|	|	|	|	|---show_view.js                    // the marionette views for the controller to use
+|	|	|	|	|	|---templates                       // templates for the new action only
 |	|	|	|	|	|	|---module1_show_template.tpl
 |	|	|	|	|	|	|---etc
 |	|	|	|	|---etc
@@ -113,14 +115,14 @@ yourAppName
 |	|	|	|	|	|	|---etc
 |	|	|	|	|---etc
 |	|	|	|---etc
-|	|	|---common
-|	|	|---entities
-|	|	|	|---module1_entity.js
-|	|	|	|---module2_entity.js
-|	|	|---vendor
+|	|	|---common                                // common views or functionality across the app
+|	|	|---entities                              // the models of the app (they contact with some remote API)
+|	|	|	|---module1_entity.js                   // entity used by module1, but there may be more of course
+|	|	|	|---module2_entity.js                   // entity used by module2, but there may be more of course
+|	|	|---vendor                                // third party plugins and depencies needed for the app
 ```
 
-## 
+## Usage
 
 ## License
 
