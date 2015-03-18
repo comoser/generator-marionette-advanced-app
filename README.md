@@ -42,6 +42,66 @@ Yeoman has a heart of gold. He's a person with feelings and opinions, but he's v
 If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
 
 
+## App Structure
+
+yourAppName
+|---index.html
+|---assets
+|	|---css
+|	|---img
+|	|---js
+|	|	|---app.js
+|	|	|---main.js
+|	|	|---apps
+|	|	|	|---module1
+|	|	|	|	|---module1_app.js
+|	|	|	|	|---list
+|	|	|	|	|	|---list_controller.js
+|	|	|	|	|	|---list_view.js
+|	|	|	|	|	|---templates
+|	|	|	|	|	|	|---module1_list_template.tpl
+|	|	|	|	|	|	|---etc
+|	|	|	|	|---new
+|	|	|	|	|	|---new_controller.js
+|	|	|	|	|	|---new_view.js
+|	|	|	|	|	|---templates
+|	|	|	|	|	|	|---module1_new_template.tpl
+|	|	|	|	|	|	|---etc
+|	|	|	|	|---show
+|	|	|	|	|	|---show_controller.js
+|	|	|	|	|	|---show_view.js
+|	|	|	|	|	|---templates
+|	|	|	|	|	|	|---module1_show_template.tpl
+|	|	|	|	|	|	|---etc
+|	|	|	|	|---etc
+|	|	|	|---module2
+|	|	|	|	|---module2_app.js
+|	|	|	|	|---list
+|	|	|	|	|	|---list_controller.js
+|	|	|	|	|	|---list_view.js
+|	|	|	|	|	|---templates
+|	|	|	|	|	|	|---module2_list_template.tpl
+|	|	|	|	|	|	|---etc
+|	|	|	|	|---new
+|	|	|	|	|	|---new_controller.js
+|	|	|	|	|	|---new_view.js
+|	|	|	|	|	|---templates
+|	|	|	|	|	|	|---module2_new_template.tpl
+|	|	|	|	|	|	|---etc
+|	|	|	|	|---show
+|	|	|	|	|	|---show_controller.js
+|	|	|	|	|	|---show_view.js
+|	|	|	|	|	|---templates
+|	|	|	|	|	|	|---module2_show_template.tpl
+|	|	|	|	|	|	|---etc
+|	|	|	|	|---etc
+|	|	|	|---etc
+|	|	|---common
+|	|	|---entities
+|	|	|	|---module1_entity.js
+|	|	|	|---module2_entity.js
+|	|	|---vendor
+
 ## License
 
 MIT
