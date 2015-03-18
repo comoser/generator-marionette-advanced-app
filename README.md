@@ -43,9 +43,8 @@ If you'd like to get to know Yeoman better and meet some of his friends, [Grunt]
 
 ## Introduction
 
-This generator follows the structure suggested for scalable Marionette/Backbone apps by David Mann. You can check it out here: 
-> [Yeoman](http://yeoman.io) generator
-> [video conference] (https://www.youtube.com/watch?v=qWr7x9wk6_c)
+This generator follows the structure suggested for scalable Marionette/Backbone apps by Brian Mann. You can check it out here:
+  > [Backbone Conf] (https://www.youtube.com/watch?v=qWr7x9wk6_c)
 
 ## App Structure
 ```bash
@@ -107,6 +106,8 @@ yourAppName
 |	|	|	|---module2_entity.js
 |	|	|---vendor
 ```
+
+## 
 
 ## License
 
