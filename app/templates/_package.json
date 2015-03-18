@@ -1,0 +1,7 @@
+{
+  "name": "<%= appName %>",
+  "version": "<%= version %>",
+  "dependencies": {
+  	"requirejs-tpl": "~0.0.2"
+  }
+}
