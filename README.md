@@ -43,7 +43,7 @@ If you'd like to get to know Yeoman better and meet some of his friends, [Grunt]
 
 
 ## App Structure
-
+```bash
 yourAppName
 |---index.html
 |---assets
@@ -101,6 +101,7 @@ yourAppName
 |	|	|	|---module1_entity.js
 |	|	|	|---module2_entity.js
 |	|	|---vendor
+```
 
 ## License
 
