@@ -43,15 +43,20 @@ If you'd like to get to know Yeoman better and meet some of his friends, [Grunt]
 
 This generator follows an app and action based approach, with the objective of creating separate modules inside a bigger app. This proves to be useful in maintaining it and in order to better scale the app.
 There are a lot of third party plugins and dependencies required for this to work properly:
-```bash
 > [Backbone] (http://backbonejs.org/)
+
 > [Marionette] (http://marionettejs.com/)
+
 > [jQuery] (http://jquery.com/download/)
+
 > [Backbone Syphon] (https://github.com/marionettejs/backbone.syphon)
+
 > [Require] (http://requirejs.org/docs/download.html)
+
 > [Underscore] (http://underscorejs.org/)
+
 > [Tpl] (https://github.com/jfparadis/requirejs-tpl)
-```
+
 This generator only creates and will ever only create the structure of the app. It will NOT include the dependencies you need in the vendor folder, leaving that task to you.
 
 ## App Structure
