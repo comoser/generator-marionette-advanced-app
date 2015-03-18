@@ -41,6 +41,9 @@ Yeoman has a heart of gold. He's a person with feelings and opinions, but he's v
 
 If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
 
+## Introduction
+
+This generator follows the structure suggested for scalable Marionette/Backbone apps by David Mann. You can check it out here: > (https://www.youtube.com/watch?v=qWr7x9wk6_c)
 
 ## App Structure
 ```bash
