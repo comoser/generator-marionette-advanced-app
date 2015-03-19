@@ -124,6 +124,29 @@ yourAppName
 
 ## Usage
 
+### Run the generator
+
+![](https://cloud.githubusercontent.com/assets/5495320/6727556/977d9e0a-ce1a-11e4-9c0f-2ede9e9143ee.png)
+
+The app name requested is the name by which your main app will be called throughout the development of your app (e.g. ContactsManager).
+
+### Set the number of modules or sub-apps wanted
+
+![](https://cloud.githubusercontent.com/assets/5495320/6727558/977ec686-ce1a-11e4-96f7-9b7f6988a37b.png)
+
+The objective of this app structure is to solely support any number of sub-apps inside the main one, in order to maintain it more easily in the future. So, here you choose how many sub-apps or modules you want inside your main app.
+
+### Set the name for each module or sub-app
+
+![](https://cloud.githubusercontent.com/assets/5495320/6727555/977d8866-ce1a-11e4-89e6-b7f2518cde08.png)
+![](https://cloud.githubusercontent.com/assets/5495320/6727554/977b60ae-ce1a-11e4-9884-ef84248e54f9.png)
+
+### Time to work!
+
+After this small setup, the generator will create a base structure for you to work with the modules you set previously.
+
+![](https://cloud.githubusercontent.com/assets/5495320/6727557/977dce70-ce1a-11e4-8db2-2cece8dc68d6.png)
+
 ## License
 
 MIT
