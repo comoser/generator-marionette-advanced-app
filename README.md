@@ -1,6 +1,5 @@
 # generator-marionette-advanced-app [![Build Status](https://secure.travis-ci.org/comoser/generator-marionette-advanced-app.png?branch=master)](https://travis-ci.org/comoser/generator-marionette-advanced-app)
 
-
 ## Getting Started
 
 ### What is Yeoman?
