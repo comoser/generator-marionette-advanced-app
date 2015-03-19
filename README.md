@@ -62,29 +62,29 @@ Refer to the Usage chapter in order to use this app structure properly.
 ## App Structure
 ```bash
 yourAppName
-|---index.html                                // holds the base html of your app (keep it as simple as possible)
+|---index.html                                			// holds the base html of your app (keep it as simple as possible)
 |---assets
-|	|---css                                     // all of the css's you need
-|	|---img                                     // all of the images you need
-|	|---js                                      // your main app folder, per say
-|	|	|---app.js                                // your main app (the entry point for your Marionette app)
-|	|	|---main.js                               // dependencies for require.js module (Marionette app starts here)
-|	|	|---apps                                  // where your modules or sub-apps reside
-|	|	|	|---module1                             // module or sub-app named "module1"
-|	|	|	|	|---module1_app.js                    // this specific module main app (the gluer of the sub-app)
-|	|	|	|	|---list                              // the action of listing something in this sub-app
+|	|---css                                     		// all of the css's you need
+|	|---img                                     		// all of the images you need
+|	|---js                                      		// your main app folder, per say
+|	|	|---app.js                                		// your main app (the entry point for your Marionette app)
+|	|	|---main.js                               		// dependencies for require.js module (Marionette app starts here)
+|	|	|---apps                                  		// where your modules or sub-apps reside
+|	|	|	|---module1                             	// module or sub-app named "module1"
+|	|	|	|	|---module1_app.js                    	// this specific module main app (the gluer of the sub-app)
+|	|	|	|	|---list                              	// the action of listing something in this sub-app
 |	|	|	|	|	|---list_controller.js              // the controller of this action only
 |	|	|	|	|	|---list_view.js                    // the marionette views for the controller to use
 |	|	|	|	|	|---templates                       // templates for the listing action only
 |	|	|	|	|	|	|---module1_list_template.tpl
 |	|	|	|	|	|	|---etc
-|	|	|	|	|---new                               // the action of creating something new in this sub-app
+|	|	|	|	|---new                               	// the action of creating something new in this sub-app
 |	|	|	|	|	|---new_controller.js               // the controller of this action only
 |	|	|	|	|	|---new_view.js                     // the marionette views for the controller to use
 |	|	|	|	|	|---templates                       // templates for the new action only
 |	|	|	|	|	|	|---module1_new_template.tpl
 |	|	|	|	|	|	|---etc
-|	|	|	|	|---show                              // the action of showing something in this sub-app
+|	|	|	|	|---show                              	// the action of showing something in this sub-app
 |	|	|	|	|	|---show_controller.js              // the controller of this action only
 |	|	|	|	|	|---show_view.js                    // the marionette views for the controller to use
 |	|	|	|	|	|---templates                       // templates for the new action only
@@ -113,11 +113,11 @@ yourAppName
 |	|	|	|	|	|	|---etc
 |	|	|	|	|---etc
 |	|	|	|---etc
-|	|	|---common                                // common views or functionality across the app
-|	|	|---entities                              // the models of the app (they contact with some remote API)
-|	|	|	|---module1_entity.js                   // entity used by module1, but there may be more of course
-|	|	|	|---module2_entity.js                   // entity used by module2, but there may be more of course
-|	|	|---vendor                                // third party plugins and dependencies needed for the app
+|	|	|---common                                		// common views or functionality across the app
+|	|	|---entities                              		// the models of the app (they contact with some remote API)
+|	|	|	|---module1_entity.js                   	// entity used by module1, but there may be more of course
+|	|	|	|---module2_entity.js                   	// entity used by module2, but there may be more of course
+|	|	|---vendor                                		// third party plugins and dependencies needed for the app
 ```
 
 ## Usage
