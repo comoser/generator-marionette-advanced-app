@@ -34,6 +34,7 @@ yo marionette-advanced-app
 ## Introduction
 
 The grounds to build this app structure were extracted from the structure David Sulc presents in his books "Backbone Marionette js: A gentle introduction",  "Structuring Backbone.js code with RequireJS and Marionette.js modules: A gentle introduction" and "Backbone Marionette js: A serious progression". All credits granted to him and to his knowledge translated in these books.
+
 This generator follows an app and action based approach, with the objective of creating separate modules inside a bigger app. *This proves to be useful in maintaining it and in order to better scale the app in the future.*
 There are a lot of third party plugins and dependencies required for this to work properly:
 > [Backbone] (http://backbonejs.org/)
