@@ -5,6 +5,7 @@
     "license": "MIT",
     "main": "app/index.js",
     "repository": "comoser/generator-marionette-advanced-app",
+    "homepage": "https://github.com/comoser/generator-marionette-advanced-app",
     "author": {
         "name": "comoser",
         "email": "david.alecrim1@gmail.com",
@@ -20,7 +21,11 @@
         "app"
     ],
     "keywords": [
-        "yeoman-generator"
+        "yeoman-generator",
+        "marionette",
+        "backbone",
+        "front-end",
+        "app"
     ],
     "dependencies": {
         "yeoman-generator": "^0.18.9",
