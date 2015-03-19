@@ -119,7 +119,7 @@ yourAppName
 |	|	|---entities                              // the models of the app (they contact with some remote API)
 |	|	|	|---module1_entity.js                   // entity used by module1, but there may be more of course
 |	|	|	|---module2_entity.js                   // entity used by module2, but there may be more of course
-|	|	|---vendor                                // third party plugins and depencies needed for the app
+|	|	|---vendor                                // third party plugins and dependencies needed for the app
 ```
 
 ## Usage
