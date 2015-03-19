@@ -20,7 +20,14 @@ module.exports = yeoman.generators.Base.extend({
             var aux = context.top - numRuns;
             context.prompt({
                 name: 'moduleName',
-                message: 'What\'s your ' + aux.toString() + ' module name?'
+                message: 'What\'s your ' + aux.toString() + ' module name?',
+                validate: function(input) {
+                    if (input.length === 0) {
+                        return 'The module name must have at least one character... :)';
+                    } else {
+                        return true;
+                    }
+                }
             }, function(props) {
                 context.moduleNames.push(props.moduleName);
                 numRuns--;
@@ -35,11 +42,25 @@ module.exports = yeoman.generators.Base.extend({
 
         var prompts = [{
             name: 'appName',
-            message: 'What\'s your app name?'
+            message: 'What\'s your app name?',
+            validate: function(input) {
+                if (input.length === 0) {
+                    return 'The app name must have at least one character... :)';
+                } else {
+                    return true;
+                }
+            }
         }, {
             type: 'number',
             name: 'numModules',
             message: 'How many modules do you want to create?',
+            validate: function(input) {
+                if (parseInt(input) <= 0) {
+                    return 'You must have at least one module... :)';
+                } else {
+                    return true;
+                }
+            },
             default: 1
         }];
 
@@ -54,7 +75,14 @@ module.exports = yeoman.generators.Base.extend({
             } else {
                 this.prompt({
                     name: 'moduleName',
-                    message: 'What\'s your module name?'
+                    message: 'What\'s your module name?',
+                    validate: function(input) {
+                        if (input.length === 0) {
+                            return 'The module name must have at least one character... :)';
+                        } else {
+                            return true;
+                        }
+                    }
                 }, function(props) {
                     this.moduleName = props.moduleName;
                     done();
@@ -128,75 +156,146 @@ module.exports = yeoman.generators.Base.extend({
                 }
             );
             // module dependant part to create folders
-            for (var i = 0; i < this.numModules; i++) {
-                this.mkdir("assets/js/apps/" + this.moduleNames[i]);
-                this.mkdir("assets/js/apps/" + this.moduleNames[i] + "/show");
-                this.mkdir("assets/js/apps/" + this.moduleNames[i] + "/show/templates");
-                this.mkdir("assets/js/apps/" + this.moduleNames[i] + "/list");
-                this.mkdir("assets/js/apps/" + this.moduleNames[i] + "/list/templates");
+            if (this.numModules === 1) {
+                this.mkdir("assets/js/apps/" + this.moduleName);
+                this.mkdir("assets/js/apps/" + this.moduleName + "/show");
+                this.mkdir("assets/js/apps/" + this.moduleName + "/show/templates");
+                this.mkdir("assets/js/apps/" + this.moduleName + "/list");
+                this.mkdir("assets/js/apps/" + this.moduleName + "/list/templates");
                 // example_module_app.js
                 this.fs.copyTpl(
                     this.templatePath('_example_module_1_app.js'),
-                    this.destinationPath('assets/js/apps/' + this.moduleNames[i] + '/' + this.moduleNames[i] + '_app.js'), {
+                    this.destinationPath('assets/js/apps/' + this.moduleName + '/' + this.moduleName + '_app.js'), {
                         appName: this.appName + 'App',
-                        moduleName: this.moduleNames[i]
+                        moduleName: this.moduleName
                     }
                 );
                 // show_controller.js
                 this.fs.copyTpl(
                     this.templatePath('_show_controller.js'),
-                    this.destinationPath('assets/js/apps/' + this.moduleNames[i] + '/show/show_controller.js'), {
+                    this.destinationPath('assets/js/apps/' + this.moduleName + '/show/show_controller.js'), {
                         appName: this.appName + 'App',
-                        moduleName: this.moduleNames[i]
+                        moduleName: this.moduleName
                     }
                 );
                 // show_view.js
                 this.fs.copyTpl(
                     this.templatePath('_show_view.js'),
-                    this.destinationPath('assets/js/apps/' + this.moduleNames[i] + '/show/show_view.js'), {
+                    this.destinationPath('assets/js/apps/' + this.moduleName + '/show/show_view.js'), {
                         appName: this.appName + 'App',
-                        moduleName: this.moduleNames[i]
+                        moduleName: this.moduleName
                     }
                 );
                 // list_controller.js
                 this.fs.copyTpl(
                     this.templatePath('_list_controller.js'),
-                    this.destinationPath('assets/js/apps/' + this.moduleNames[i] + '/list/list_controller.js'), {
+                    this.destinationPath('assets/js/apps/' + this.moduleName + '/list/list_controller.js'), {
                         appName: this.appName + 'App',
-                        moduleName: this.moduleNames[i]
+                        moduleName: this.moduleName
                     }
                 );
                 // list_view.js
                 this.fs.copyTpl(
                     this.templatePath('_list_view.js'),
-                    this.destinationPath('assets/js/apps/' + this.moduleNames[i] + '/list/list_view.js'), {
+                    this.destinationPath('assets/js/apps/' + this.moduleName + '/list/list_view.js'), {
                         appName: this.appName + 'App',
-                        moduleName: this.moduleNames[i]
+                        moduleName: this.moduleName
                     }
                 );
                 // list_collection_template.tpl
                 this.fs.copyTpl(
                     this.templatePath('_list_collection_template.tpl'),
-                    this.destinationPath('assets/js/apps/' + this.moduleNames[i] + '/list/templates/list_collection_template.tpl')
+                    this.destinationPath('assets/js/apps/' + this.moduleName + '/list/templates/list_collection_template.tpl')
                 );
                 // list_template.tpl
                 this.fs.copyTpl(
                     this.templatePath('_list_template.tpl'),
-                    this.destinationPath('assets/js/apps/' + this.moduleNames[i] + '/list/templates/list_template.tpl')
+                    this.destinationPath('assets/js/apps/' + this.moduleName + '/list/templates/list_template.tpl')
                 );
                 // show_template.tpl
                 this.fs.copyTpl(
                     this.templatePath('_show_template.tpl'),
-                    this.destinationPath('assets/js/apps/' + this.moduleNames[i] + '/show/templates/show_template.tpl')
+                    this.destinationPath('assets/js/apps/' + this.moduleName + '/show/templates/show_template.tpl')
                 );
                 // example_entity.js
                 this.fs.copyTpl(
                     this.templatePath('_example_entity.js'),
-                    this.destinationPath('assets/js/entities/' + this.moduleNames[i] + '_entity.js'), {
+                    this.destinationPath('assets/js/entities/' + this.moduleName + '_entity.js'), {
                         appName: this.appName + 'App',
-                        moduleName: this.moduleNames[i]
+                        moduleName: this.moduleName
                     }
                 );
+            } else {
+                for (var i = 0; i < this.numModules; i++) {
+                    this.mkdir("assets/js/apps/" + this.moduleNames[i]);
+                    this.mkdir("assets/js/apps/" + this.moduleNames[i] + "/show");
+                    this.mkdir("assets/js/apps/" + this.moduleNames[i] + "/show/templates");
+                    this.mkdir("assets/js/apps/" + this.moduleNames[i] + "/list");
+                    this.mkdir("assets/js/apps/" + this.moduleNames[i] + "/list/templates");
+                    // example_module_app.js
+                    this.fs.copyTpl(
+                        this.templatePath('_example_module_1_app.js'),
+                        this.destinationPath('assets/js/apps/' + this.moduleNames[i] + '/' + this.moduleNames[i] + '_app.js'), {
+                            appName: this.appName + 'App',
+                            moduleName: this.moduleNames[i]
+                        }
+                    );
+                    // show_controller.js
+                    this.fs.copyTpl(
+                        this.templatePath('_show_controller.js'),
+                        this.destinationPath('assets/js/apps/' + this.moduleNames[i] + '/show/show_controller.js'), {
+                            appName: this.appName + 'App',
+                            moduleName: this.moduleNames[i]
+                        }
+                    );
+                    // show_view.js
+                    this.fs.copyTpl(
+                        this.templatePath('_show_view.js'),
+                        this.destinationPath('assets/js/apps/' + this.moduleNames[i] + '/show/show_view.js'), {
+                            appName: this.appName + 'App',
+                            moduleName: this.moduleNames[i]
+                        }
+                    );
+                    // list_controller.js
+                    this.fs.copyTpl(
+                        this.templatePath('_list_controller.js'),
+                        this.destinationPath('assets/js/apps/' + this.moduleNames[i] + '/list/list_controller.js'), {
+                            appName: this.appName + 'App',
+                            moduleName: this.moduleNames[i]
+                        }
+                    );
+                    // list_view.js
+                    this.fs.copyTpl(
+                        this.templatePath('_list_view.js'),
+                        this.destinationPath('assets/js/apps/' + this.moduleNames[i] + '/list/list_view.js'), {
+                            appName: this.appName + 'App',
+                            moduleName: this.moduleNames[i]
+                        }
+                    );
+                    // list_collection_template.tpl
+                    this.fs.copyTpl(
+                        this.templatePath('_list_collection_template.tpl'),
+                        this.destinationPath('assets/js/apps/' + this.moduleNames[i] + '/list/templates/list_collection_template.tpl')
+                    );
+                    // list_template.tpl
+                    this.fs.copyTpl(
+                        this.templatePath('_list_template.tpl'),
+                        this.destinationPath('assets/js/apps/' + this.moduleNames[i] + '/list/templates/list_template.tpl')
+                    );
+                    // show_template.tpl
+                    this.fs.copyTpl(
+                        this.templatePath('_show_template.tpl'),
+                        this.destinationPath('assets/js/apps/' + this.moduleNames[i] + '/show/templates/show_template.tpl')
+                    );
+                    // example_entity.js
+                    this.fs.copyTpl(
+                        this.templatePath('_example_entity.js'),
+                        this.destinationPath('assets/js/entities/' + this.moduleNames[i] + '_entity.js'), {
+                            appName: this.appName + 'App',
+                            moduleName: this.moduleNames[i]
+                        }
+                    );
+                }
             }
         }
     },
