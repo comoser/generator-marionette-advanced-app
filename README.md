@@ -1,6 +1,6 @@
-# generator-marionette-advanced-app 
+<h1 align="center"> # generator-marionette-advanced-app </h1>
 
-> [![Build Status](https://secure.travis-ci.org/comoser/generator-marionette-advanced-app.png?branch=master)](https://travis-ci.org/comoser/generator-marionette-advanced-app)
+<p align="center"> > [![Build Status](https://secure.travis-ci.org/comoser/generator-marionette-advanced-app.png?branch=master)](https://travis-ci.org/comoser/generator-marionette-advanced-app) </p>
 
 ## Getting Started
 
