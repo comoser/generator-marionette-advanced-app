@@ -58,7 +58,7 @@ There are a lot of third party plugins and dependencies required for this to wor
 
 This generator only creates and will ever only create the structure of the app. 
 It will NOT include the dependencies you need in the vendor folder, leaving that task to you.
-Refer to the Usage chapter in order to use this app structure properly.
+A tutorial showing how to properly work with this structure will soon follow and a link to it will be posted here.
 
 ## App Structure
 ```bash
