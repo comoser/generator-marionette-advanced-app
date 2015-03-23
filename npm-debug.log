@@ -1,21 +1,89 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'link' ]
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'generator-marionette-advanced-app' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.36
-4 verbose linkPkg /Users/david/Documents/Workspace Global/generator-marionette-advanced-app
-5 error Error: EACCES, unlink '/usr/local/lib/node_modules/generator-marionette-advanced-app'
-5 error  { [Error: EACCES, unlink '/usr/local/lib/node_modules/generator-marionette-advanced-app']
-5 error   errno: 3,
-5 error   code: 'EACCES',
-5 error   path: '/usr/local/lib/node_modules/generator-marionette-advanced-app' }
-6 error Please try running this command again as root/Administrator.
-7 error System Darwin 14.0.0
-8 error command "node" "/usr/local/bin/npm" "link"
-9 error cwd /Users/david/Documents/Workspace Global/generator-marionette-advanced-app
-10 error node -v v0.10.36
-11 error npm -v 1.4.28
-12 error path /usr/local/lib/node_modules/generator-marionette-advanced-app
-13 error code EACCES
-14 error errno 3
-15 error stack Error: EACCES, unlink '/usr/local/lib/node_modules/generator-marionette-advanced-app'
-16 verbose exit [ 3, true ]
+4 verbose cache add [ 'generator-marionette-advanced-app', null ]
+5 verbose cache add name=undefined spec="generator-marionette-advanced-app" args=["generator-marionette-advanced-app",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'generator-marionette-advanced-app',
+6 verbose parsed url   path: 'generator-marionette-advanced-app',
+6 verbose parsed url   href: 'generator-marionette-advanced-app' }
+7 silly lockFile aa125710-enerator-marionette-advanced-app generator-marionette-advanced-app
+8 verbose lock generator-marionette-advanced-app /Users/david/.npm/aa125710-enerator-marionette-advanced-app.lock
+9 silly lockFile aa125710-enerator-marionette-advanced-app generator-marionette-advanced-app
+10 silly lockFile aa125710-enerator-marionette-advanced-app generator-marionette-advanced-app
+11 verbose addNamed [ 'generator-marionette-advanced-app', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 87f92778-enerator-marionette-advanced-app generator-marionette-advanced-app@
+14 verbose lock generator-marionette-advanced-app@ /Users/david/.npm/87f92778-enerator-marionette-advanced-app.lock
+15 silly addNameRange { name: 'generator-marionette-advanced-app',
+15 silly addNameRange   range: '*',
+15 silly addNameRange   hasData: false }
+16 verbose request where is /generator-marionette-advanced-app
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id 304a03de2f4d2f17
+19 verbose url raw /generator-marionette-advanced-app
+20 verbose url resolving [ 'https://registry.npmjs.org/',
+20 verbose url resolving   './generator-marionette-advanced-app' ]
+21 verbose url resolved https://registry.npmjs.org/generator-marionette-advanced-app
+22 verbose request where is https://registry.npmjs.org/generator-marionette-advanced-app
+23 info trying registry request attempt 1 at 12:52:43
+24 http GET https://registry.npmjs.org/generator-marionette-advanced-app
+25 http 404 https://registry.npmjs.org/generator-marionette-advanced-app
+26 verbose headers { date: 'Fri, 20 Mar 2015 12:52:43 GMT',
+26 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+26 verbose headers   'content-type': 'application/json',
+26 verbose headers   'cache-control': 'max-age=0',
+26 verbose headers   'content-length': '51',
+26 verbose headers   'accept-ranges': 'bytes',
+26 verbose headers   via: '1.1 varnish',
+26 verbose headers   age: '0',
+26 verbose headers   'x-served-by': 'cache-lcy1125-LCY',
+26 verbose headers   'x-cache': 'MISS',
+26 verbose headers   'x-cache-hits': '0',
+26 verbose headers   'x-timer': 'S1426855963.578902,VS0,VE163',
+26 verbose headers   'keep-alive': 'timeout=10, max=50',
+26 verbose headers   connection: 'Keep-Alive' }
+27 silly registry.get cb [ 404,
+27 silly registry.get   { date: 'Fri, 20 Mar 2015 12:52:43 GMT',
+27 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+27 silly registry.get     'content-type': 'application/json',
+27 silly registry.get     'cache-control': 'max-age=0',
+27 silly registry.get     'content-length': '51',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     age: '0',
+27 silly registry.get     'x-served-by': 'cache-lcy1125-LCY',
+27 silly registry.get     'x-cache': 'MISS',
+27 silly registry.get     'x-cache-hits': '0',
+27 silly registry.get     'x-timer': 'S1426855963.578902,VS0,VE163',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 silly lockFile 87f92778-enerator-marionette-advanced-app generator-marionette-advanced-app@
+29 silly lockFile 87f92778-enerator-marionette-advanced-app generator-marionette-advanced-app@
+30 error 404 404 Not Found: generator-marionette-advanced-app
+30 error 404
+30 error 404 'generator-marionette-advanced-app' is not in the npm registry.
+30 error 404 You should bug the author to publish it
+30 error 404
+30 error 404 Note that you can also install from a
+30 error 404 tarball, folder, or http url, or git url.
+31 error System Darwin 14.0.0
+32 error command "node" "/usr/local/bin/npm" "install" "-g" "generator-marionette-advanced-app"
+33 error cwd /Users/david/Documents/Workspace Global/generator-marionette-advanced-app
+34 error node -v v0.10.36
+35 error npm -v 1.4.28
+36 error code E404
+37 verbose exit [ 1, true ]
